@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        #img-zoomer-box {
+            max-width: 500px;
+            height: auto;
+            position: relative;
+            margin: 10px auto;
+          }
+          
+          #img-1 {
+            width: 100%;
+            height: auto;
+          }
+          
+          #img-zoomer-box:hover, #img-zoomer-box:active {
+            cursor: zoom-in;
+            display: block;
+          }
+          
+          #img-zoomer-box:hover #img-2, #img-zoomer-box:active #img-2 {
+            opacity: 1;
+          }
+          #img-2 {
+            width: 340px;
+            height: 340px;
+            background: url('/MEDIA/Trending/AD2.jpg') no-repeat #FFF;
+            box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+            pointer-events: none;
+            position: absolute;
+            opacity: 0;
+            border: 4px solid whitesmoke;
+            z-index: 99;
+            border-radius: 100%;
+            display: block;
+            transition: opacity .2s;
+          }
+
+    </style>
+
+</head>
+<body style="background-color: aquamarine; height:80px;">
+    <div>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Link</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+<div style="margin-top: 60px;margin-bottom:0%;width:auto;height:70px;">
+    <h1 id="itemname">Item-Name</h1>
+    <div class="row" style="height: fit-content;width:fit-content;" >
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+
+
+        <div id="img-zoomer-box">
+            <img src="/MEDIA/Trending/AD2.jpg" id="img-1" alt="Zoom Image on Mouseover"/>
+            <div id="img-2"></div>
+          </div> 
+
+          <!--<img src="/MEDIA/Trending/AD2.jpg" class="card-img-top" alt="...">-->
+        
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+        <div class="card-body">
+          <button onclick="secondFunction()">Card Link</button>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+      <div class="col-sm-8"  >
+        <div style="background-color: aliceblue;margin-left:5%;margin-right:0%;padding:20px;border-radius:35px;height:690px;margin-bottom:0%;">
+          <h1>Item-Description</h1>
+          <hr>
+        <p id="itemdesc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed consequatur molestias sapiente sit, molestiae architecto laudantium aperiam laborum. Quia laudantium temporibus dolorum inventore, 
+        ab tenetur blanditiis perspiciatis cupiditate soluta ipsa.</p>
+      </div></div>
+      </div>
+    
+</div>
+
+<div><footer style="float:left;background-color:rgb(249, 249, 249); padding:20px;margin-top:700px;">
+        <div class="row">
+            <div style="float: left;" class="col">
+                <h3>Company Name</h3>
+                <p>We are creating High Quality Resources and tools to Aid developers during the development of their
+                    projects</p>
+            </div>
+            <div style="float: left;" class="col">
+                <h3>Help</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, consequatur nulla. Quibusdam, sed
+                    quasi! Recusandae accusamus, eius molestiae illum nam repudiandae reprehenderit perferendis pariatur
+                    dicta quia blanditiis illo aliquam soluta?</p>
+            </div>
+            <div style="float: left;" class="col">
+                <h3>Products</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, dolore amet harum, obcaecati vero
+                    laboriosam beatae nostrum quibusdam deserunt fugiat exercitationem optio minus magni saepe tenetur
+                    mollitia incidunt delectus architecto.</p>
+            </div>
+        </div>
+        <div class="row" style="float: inline-start;">
+            <div class="col">
+
+                <a href="https://www.youtube.com/" class="youtube"><img src="/MEDIA/youtube.png" alt=""
+                        style=" height:50px;width:50px;" class="youtube"></a>
+            </div>
+            <div class="col">
+                <a href="https://www.facebook.com/"><img src="/MEDIA/facebook.png" alt=""
+                        style=" height:50px;width:50px;"></a>
+
+            </div>
+            <div class="col">
+                <a href="https://www.instagram.com/"><img src="/MEDIA/instagram.png" alt=""
+                        style=" height:50px;width:50px;"></a>
+
+            </div>
+
+        </div>
+
+    </footer></div>
+    
+
+
+    <script>
+       
+let zoomer = function (){
+    document.querySelector('#img-zoomer-box')
+      .addEventListener('mousemove', function(e) {
+  
+      let original = document.querySelector('#img-1'),
+          magnified = document.querySelector('#img-2'),
+          style = magnified.style,
+          x = e.pageX - this.offsetLeft,
+          y = e.pageY - this.offsetTop,
+          imgWidth = original.offsetWidth,
+          imgHeight = original.offsetHeight,
+          xperc = ((x/imgWidth) * 100),
+          yperc = ((y/imgHeight) * 100);
+  
+      //lets user scroll past right edge of image
+      if(x > (.01 * imgWidth)) {
+        xperc += (.15 * xperc);
+      };
+  
+      //lets user scroll past bottom edge of image
+      if(y >= (.01 * imgHeight)) {
+        yperc += (.15 * yperc);
+      };
+  
+      style.backgroundPositionX = (xperc - 9) + '%';
+      style.backgroundPositionY = (yperc - 9) + '%';
+  
+      style.left = (x - 180) + 'px';
+      style.top = (y - 180) + 'px';
+  
+    }, false);
+  }();
+
+
+    </script>
+
+
+    <script src="./Index.js"></script>
+</body>
+</html>
